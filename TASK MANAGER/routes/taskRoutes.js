@@ -1,9 +1,11 @@
+const { getTasks, createTask, updateTask } = require("../controllers/TaskController");
+
 const taskRoutes =(req,res)=>{
     if(req.method =='GET'){
         getTasks(req,res);
     
     }else if(req.method== 'POST'){
-        createTasks(req,res)
+        createTaskk(req,res)
     }else if (req.method =='PATCH'){
         updateTask(req,res)
     }else if(req.method == 'DELETE'){
@@ -16,4 +18,4 @@ const taskRoutes =(req,res)=>{
     }
 }
 
-module.exports = taskRoutes;
+module.exports= taskRoutes;
